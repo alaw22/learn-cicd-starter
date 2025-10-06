@@ -42,7 +42,7 @@ func TestAuth(t *testing.T) {
 			got, _ := GetAPIKey(tc.input)
 			diff := cmp.Diff(tc.want, got)
 			if diff != "" {
-				t.Fatalf(diff)
+				t.Fatal(diff)
 			}
 
 		})
